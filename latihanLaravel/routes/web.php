@@ -36,4 +36,4 @@ route::get('/latihanView01',function(){
     return view("latihan01");
 });
 
-route::get('/produk/showproduk',[produkController::class,'showproduk']);
+route::get('/produk/showproduk',[productcontroller::class,'showproduk']);
