@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\productcontroller;
+use App\Http\Controllers\produkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,4 +36,4 @@ route::get('/latihanView01',function(){
     return view("latihan01");
 });
 
-route::get('/produk/showproduk',[productcontroller::class,'showproduk']);
+route::get('/produk/showproduk',[produkController::class,'showproduk']);
