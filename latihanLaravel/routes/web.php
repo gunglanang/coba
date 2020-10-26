@@ -13,27 +13,9 @@ use App\Http\Controllers\produkController;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/aboutme', function(){
-    echo "Ini adalah percobaan menampilkan Page";
-})->name("tentang");
-
-Route::get('/show/{id?}', function($id=1){
-    echo "Parameter ID: " . $id;
-})->where('id','[0-9]+');
-
-Route::get('/utama',function(){
-    echo "Ini Page Utama";
-    echo "<br>";
-    echo "<a href='".route('tentang')."'>About</a>";
+Route::get('/about', function () {
+    return view('about');
 });
-
-Route::get('/produk',[produkController::class ,'index']);
-
-route::get('/latihanView01',function(){
-    return view("latihan01");
-});
-
-route::get('/produk/showproduk',[produkController::class,'showproduk']);
