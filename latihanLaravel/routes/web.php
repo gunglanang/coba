@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::get('/aboutcon', function () {
+    return view('about');
+});
