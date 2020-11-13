@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\produkController;
+use App\Http\Controllers\kategoriController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +24,4 @@ Route::get('/about', function () {
 Route::get('/aboutcon', function () {
     return view('about');
 });
+Route::get('/kategori',[kategoriController::class,'index']);
