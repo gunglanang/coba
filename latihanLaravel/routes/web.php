@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\produkController;
 use App\Http\Controllers\kategoriController;
+use App\Http\Controllers\Prak9Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +26,6 @@ Route::get('/aboutcon', function () {
     return view('about');
 });
 Route::get('/kategori',[kategoriController::class,'index']);
+
+Route::get('/prak9_01',[prak9Controller::class,'QB_tugas1']);
+Route::get('/prak9_02',[prak9Controller::class,'QB_tugas2']);

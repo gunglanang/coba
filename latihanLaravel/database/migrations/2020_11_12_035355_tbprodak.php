@@ -16,10 +16,12 @@ class Tbprodak extends Migration
         //bagian restore data 
 		schema::create ('produks', function (Blueprint $tb){ 
 		$tb->increments ('ID'); 
-		$tb->string('NAMA',20); 
-		$tb->integer ('ID_KATEGORI'); 
-		$tb->float (' HARGA BELI'); 
-		$tb->float ('HARGA JUAL'); 
+		$tb->string('NAMA',20);
+        $tb->string('KATEGORI',100);
+		$tb->integer ('ID_KATEGORI');
+        $tb->integer('QTY'); 
+		$tb->float ('HARGA_BELI'); 
+		$tb->float ('HARGA_JUAL'); 
 		$tb->timestamps(); 
 		});
     }
