@@ -13,6 +13,7 @@
 					<td>No</td>
 					<td>Kategori</td>
 					<td>Keterangan</td>
+					<td>Aksi</td>
 				</thead>
 				<tbody>
 					@foreach ($kategori as $key => $value)
@@ -20,6 +21,10 @@
 						<td>{{$key+1}}</td>
 						<td>{{$value->KATEGOI}}</td>
 						<td>{{$value->KETERANGAN}}</td>
+						<td>
+							<button type="button"><a href="">Edit</a></button>
+							<button type="button"><a href="">Delete</a></button>
+						</td>
 					<tr/>
 					@endforeach
 				</tbody>

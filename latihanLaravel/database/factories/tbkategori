@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class tbkategori extends Model
+class kategoris extends Model
 {
     use HasFactory;
-    public $tabel = "tbkategori";
+    protected $guarded = ['ID','created_at', 'updated_at'];
 }
