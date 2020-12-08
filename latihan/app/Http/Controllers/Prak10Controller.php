@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\factoris\tbkategori;
+use App\Models\tbkategori;
 class Prak10Controller extends Controller
 {
     /**
