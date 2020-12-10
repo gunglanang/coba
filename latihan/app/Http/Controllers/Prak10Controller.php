@@ -17,7 +17,7 @@ class Prak10Controller extends Controller
         $KData = tbkategori::get();
         $JRek = tbkategori::count();
 
-        return view('praktikum10.tugas1', compact('KData','JRek'));
+        return view('pratikum10.tugas1', compact('KData','JRek'));
     }
 
     /**
@@ -28,7 +28,7 @@ class Prak10Controller extends Controller
     public function create()
     {
         //Menampilkan form untuk menambahkan data baru
-        return view('praktikum10.tugas1create');
+        return view('pratikum10.tugas1create');
     }
 
     /**
@@ -78,7 +78,7 @@ class Prak10Controller extends Controller
     {
         //Menampilkan form dan data yang ingin diubah
         $eDT = kategoris::where('ID',$id)->first();
-        return view('praktikum10.tugas1edit', compact('eDT'));
+        return view('pratikum10.tugas1edit', compact('eDT'));
     }
 
     /**

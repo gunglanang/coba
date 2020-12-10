@@ -6,7 +6,7 @@
 <body>
     <h2>Edit Data Kategori ID:{{ $eDT->ID }} </h2>
 
-    <form method="POST" action="http://localhost:8000/prak10/{{ $eDT->ID }}">
+    <form method="POST" action="http://localhost:8000/Prak10/{{ $eDT->ID }}">
         @csrf()
         @method('PUT')
         <div class="txlabel">Kategori</div>
@@ -20,7 +20,7 @@
 
     </form>
 
-    <form method="POST" action="http://localhost:8000/prak10/{{ $eDT->ID }}">
+    <form method="POST" action="http://localhost:8000/Prak10/{{ $eDT->ID }}">
         @csrf()
         @method('DELETE')
         <div class="tombol">
