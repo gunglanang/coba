@@ -19,7 +19,7 @@
 					@foreach ($kategori as $key => $value)
 					<tr>
 						<td>{{$key+1}}</td>
-						<td>{{$value->KATEGOI}}</td>
+						<td>{{$value->KATEGORI}}</td>
 						<td>{{$value->KETERANGAN}}</td>
 						<td>
 							<button type="button"><a href="">Edit</a></button>

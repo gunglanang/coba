@@ -32,4 +32,4 @@ Route::get('/kategori',[kategoriController::class,'index']);
 Route::get('/prak9_01',[prak9Controller::class,'QB_tugas1']);
 Route::get('/prak9_02',[prak9Controller::class,'QB_tugas2']);
 
-Route::resource('/prak10',Prak10Controller::class,);
+Route::resource('/prak10',Prak10Controller::class);

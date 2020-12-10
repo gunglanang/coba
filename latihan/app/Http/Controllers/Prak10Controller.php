@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\tbkategori;
+use App\Models\kategoris;
 class Prak10Controller extends Controller
 {
     /**
@@ -14,8 +14,8 @@ class Prak10Controller extends Controller
     public function index()
     {
         //Menampilkan data dari tabel tbkategori
-        $KData = tbkategori::get();
-        $JRek = tbkategori::count();
+        $KData = kategoris::get();
+        $JRek = kategoris::count();
 
         return view('pratikum10.tugas1', compact('KData','JRek'));
     }

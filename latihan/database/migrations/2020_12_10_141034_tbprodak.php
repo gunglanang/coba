@@ -14,16 +14,14 @@ class Tbprodak extends Migration
     public function up()
     {
         //bagian restore data 
-		schema::create ('produks', function (Blueprint $tb){ 
-		$tb->increments ('ID'); 
-		$tb->string('NAMA',20);
-        $tb->string('KATEGORI',100);
-		$tb->integer ('ID_KATEGORI');
+        schema::create ('prodaks', function (Blueprint $tb){ 
+        $tb->increments ('ID'); 
+        $tb->string('NAMA',20);
         $tb->integer('QTY'); 
-		$tb->float ('HARGA_BELI'); 
-		$tb->float ('HARGA_JUAL'); 
-		$tb->timestamps(); 
-		});
+        $tb->double ('HARGA_BELI'); 
+        $tb->double ('HARGA_JUAL'); 
+        $tb->timestamps(); 
+        });
     }
 
     /**
@@ -34,6 +32,6 @@ class Tbprodak extends Migration
     public function down()
     {
         //bagian drop data 
-		schema::dropIfExists ('produksi');
+        schema::dropIfExists ('prodaks');
     }
 }

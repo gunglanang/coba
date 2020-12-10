@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Daftar Kategori</title>
+        <title>Tambah Data Kategori</title>
 </head>
 <body>
-    <h2>Daftar Kategori</h2>
+    <h2>Menambahkan Data Kategori</h2>
 
-    Jumlah Data : {{ $JRek }}
-    <a href="http://localhost:8000/Prak10/create">Tambah Data</a>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>ID Kategori</th>
-                <th>Kategori</th>
-                <th>Deskripsi</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-        @foreach($KData as $i=>$p)
-            <tr>
-                <td>{{$i+1}}</td>
-                <td>{{$p->ID}}</td>
-                <td>{{$p->KATEGORI}}</td>
-                <td>{{$p->KETERANGAN}}</td>
-                <td><a href="http://localhost:8000/Prak10/{{$p->ID}}/edit">Edit</a></td>
-                
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
+    @if(count($errors) > 0)
+        <div>
+            <ul>
+            @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+            @endforeach</ul>
+        </div>
+    @endif
+    <form method="POST" action="http://localhost:8000/prak10">
+        @csrf()
+        @method('POST')
+        <div class="txlabel">Kategori</div>
+        <div class="inputtext"><input type="text" name="txkat">
+        @if($errors->has("txkat"))
+            <span>{{$error}}</span>
+        @endif</div>
+        <div class="txlabel">Deskripsi</div>
+        <div class="inputtext"><input type="text" name="txdesk">
+        @if($errors->has("txdesk"))
+            <span>{{$error}}</span>
+        @endif</div>
+        <div class="tombol">
+        <input type="submit" class="btn" name="btnkirim" value="Buat Data"></div>
+
+    </form>
 
 
 </body>
