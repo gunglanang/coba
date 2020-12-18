@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class prodaks extends Model
+class tbpelanggan extends Model
 {
     use HasFactory;
-    protected $guarded = ['ID','created_at', 'updated_at'];
+    protected $table = 'tbpelanggan';
 }

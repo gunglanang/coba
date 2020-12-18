@@ -6,6 +6,7 @@ use App\Http\Controllers\kategoriController;
 use App\Http\Controllers\Prak9Controller;
 
 use App\Http\Controllers\Prak10Controller;
+use App\Http\Controllers\prak11controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,5 @@ Route::get('/prak9_01',[prak9Controller::class,'QB_tugas1']);
 Route::get('/prak9_02',[prak9Controller::class,'QB_tugas2']);
 
 Route::resource('/prak10',Prak10Controller::class);
+
+Route::resource('/prak11',prak11controller::class);
