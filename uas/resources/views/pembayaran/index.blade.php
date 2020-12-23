@@ -40,7 +40,7 @@
                     <table id="myTable" class="display">
                         <thead>
                             <tr>
-                                <th>Atas Nama</th>
+                                <th>Atas nama</th>
                                 <th>Detail</th>
                                 <th>Pembayaran via</th>
                                 <th>Tanggal</th>
