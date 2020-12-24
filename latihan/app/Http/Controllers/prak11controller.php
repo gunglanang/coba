@@ -93,7 +93,9 @@ class Prak11Controller extends Controller
      */
     public function edit($id)
     {
-        //
+     //Menampilkan form dan data yang ingin diubah
+        $eDT = kategoris::where('ID',$id)->first();
+        return view('pratikum11.edit', compact('eDT'));
     }
 
     /**
@@ -105,7 +107,12 @@ class Prak11Controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //Proses perubahan data
+        kategoris::where('ID',$id)->update([
+            'KATEGORI'=> $request->txkat,
+            'KETERANGAN'=> $request->txdesk,
+        ]);
+        return redirect()->route('prak11.index');
     }
 
     /**
@@ -116,6 +123,8 @@ class Prak11Controller extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Proses hapus data
+        kategoris::where('ID',$id)->delete();
+        return redirect()->route('prak11.index');
     }
 }
