@@ -98,7 +98,7 @@ class TarifController extends Controller
         return redirect()->route('tarif.index');
     }
 
-    /**
+    /** akhir
      * Remove the specified resource from storage.
      *
      * @param  int  $id
